@@ -60,7 +60,7 @@ elif page == "Data Visualization":
     tab1, tab2 = st.tabs(["Bar Chart", "Correlation Heatmap"])
     with tab1:
         st.subheader("Bar Chart")
-        col_x = st.selectbox("Select X-axis variable", df.columns, index=0)
+        col_x = st.selectbox("Select X-axis variable", df_numeric.columns, index=0)
         st.bar_chart(df[[col_x, "PRICE"]].sort_values(by=col_x), use_container_width=True)
     with tab2:
         st.subheader("Correlation Matrix")
