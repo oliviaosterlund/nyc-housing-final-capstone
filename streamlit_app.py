@@ -70,7 +70,7 @@ elif page == "Data Visualization":
     with tab1:
         st.subheader("Scatter Plot")
         fig_bar, ax_bar = plt.subplots(figsize=(12,6))
-        x_col = st.selectbox("Select x-axis variable", df_numeric.columns.drop("PRICE")
+        x_col = st.selectbox("Select x-axis variable", df_numeric.columns.drop("PRICE"))
         sns.scatterplot(df_numeric, x = x_col, y = "PRICE")
         st.pyplot(fig_bar)
     with tab2:
