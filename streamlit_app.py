@@ -33,6 +33,6 @@ st.set_page_config(
 
 df = pd.read_csv("NY-House-Dataset.csv")
 st.sidebar.title("Student Habits vs Student Performance")
-page = st.sidebar.selectbox("Select Page",["Introduction","Data Visualization", "Automated Report","Predictions", "Explainability", "Pycaret" "MLFlow Runs"])
+page = st.sidebar.selectbox("Select Page",["Introduction","Data Visualization", "Automated Report","Predictions", "Explainability", "Pycaret", "MLFlow Runs"])
 
 
