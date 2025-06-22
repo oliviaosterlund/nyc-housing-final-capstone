@@ -31,8 +31,7 @@ st.set_page_config(
     page_icon="🍎",
 )
 
-dfo = pd.read_csv("NY-House-Dataset.csv")
-df = dfo.drop(["BROKERTITLE", "LONG_NAME"], axis = 1)
+df = pd.read_csv("NY-House-Dataset.csv")
 st.sidebar.title("New York Housing Market")
 page = st.sidebar.selectbox("Select Page",["Introduction","Data Visualization", "Automated Report","Predictions", "Explainability", "MLFlow Runs"])
 df_numeric = df.select_dtypes(include=np.number)
