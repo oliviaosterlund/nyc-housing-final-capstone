@@ -60,12 +60,12 @@ elif page == "Data Visualization":
     tab1, tab2 = st.tabs(["Bar Chart", "Correlation Heatmap"])
     with tab1:
         st.subheader("Bar Chart")
-        col_x = st.selectbox("Select X-axis variable", df_numeric.columns, index=0)
-        st.bar_chart(df[[col_x, "PRICE"]].sort_values(by=col_x), use_container_width=True)
+        col_x = st.selectbox("Select X-axis variable", df_numeric.columns.drop("PRICE"), index=0)
+        st.bar_chart(df_numeric[[col_x, "PRICE"]].sort_values(by=col_x), use_container_width=True)
     with tab2:
         st.subheader("Correlation Matrix")
         fig_corr, ax_corr = plt.subplots(figsize=(18,14))
-        sns.heatmap(df_numeric.corr(),annot=True,fmt=".2f",cmap='coolwarm')
+        sns.heatmap(df_numeric.corr(), annot=True, fmt=".2f", cmap='coolwarm', ax=ax_corr)
         st.pyplot(fig_corr)
 
 elif page == "Automated Report":
