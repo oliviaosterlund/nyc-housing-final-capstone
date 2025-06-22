@@ -57,13 +57,10 @@ if page == "Introduction":
 elif page == "Data Visualization":
     st.subheader("Data Viz")
 
-    tab1, tab2 = st.tabs(["Scatter Plot", "Correlation Heatmap"])
+    tab1, tab2 = st.tabs(["Bar Chart", "Correlation Heatmap"])
     with tab1:
-        st.subheader("Scatter Plot")
-        fig_bar, ax_bar = plt.subplots(figsize=(12,6))
-        x_col = st.selectbox("Select x-axis variable", df_numeric.columns.drop("PRICE"))
-        sns.scatterplot(df_numeric, x = x_col, y = "PRICE")
-        st.pyplot(fig_bar)
+        st.subheader("Bar Chart")
+        st.bar_chart(df[[col_x, col_y]].sort_values(by=col_x), use_container_width=True)
     with tab2:
         st.subheader("Correlation Matrix")
         fig_corr, ax_corr = plt.subplots(figsize=(18,14))
