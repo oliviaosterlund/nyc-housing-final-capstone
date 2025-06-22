@@ -44,15 +44,6 @@ if page == "Introduction":
     - *Predicts* housing prices using a selection of regression models
     """)
     st.image("housingimage.png")
-
-    st.markdown("#### The Dataset")
-    st.markdown("""
-    This dataset contains key features such as:
-    -  
-                
-    The goal is to leverage these factors to *predict the price of housing* in New York and better understand
-    which variables are most impactful.
-    """)
     
     st.markdown("##### Data Preview")
     rows = st.slider("Select a number of rows to display",5,20,5)
