@@ -43,7 +43,7 @@ if page == "Introduction":
     - *Visualizes* trends
     - *Predicts* housing prices using a selection of regression models
     """)
-    st.image("housingimage", width=500)
+    st.image("housingimage")
 
     st.markdown("#### The Dataset")
     st.markdown("""
